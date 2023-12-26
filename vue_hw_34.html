@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 導入CSS -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/tempt.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+
+    <!-- 英文字體 marck script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 中文字體-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Klee+One&family=Marck+Script&display=swap"
+      rel="stylesheet"
+    />
+    <!--原始檔案導入部分-->
+    <link rel="shortcut icon" href="./photos/icon/favicon.png" />
+    <script src="jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <div class="login_container" id="loginBox" style="display: none">
+      <div class="login_main_area" id="login_main">
+        <div class="login_title">
+          <h2>會員登入</h2>
+          <h3>Login</h3>
+        </div>
+        <div class="login_block">
+          <div>
+            <p>帳號：</p>
+            <input type="text" placeholder="請輸入會員帳號" />
+          </div>
+          <div>
+            <p>密碼：</p>
+            <input type="password" placeholder="請輸入密碼" />
+          </div>
+          <a href="#"><span>忘記密碼?</span></a>
+        </div>
+        <div class="login_btn">
+          <a href="#" class="signup">
+            <span>會員註冊</span>
+          </a>
+          <button class="member_login">登入</button>
+          <button class="member_cancel" id="cancelBtn">取消</button>
+        </div>
+      </div>
+    </div>
+    <header>
+      <!-- 導覽列 -->
+      <nav id="header">
+        <div class="mynav">
+          <div class="logo">
+            <a href="./index.html"
+              ><img src="./photos/icon/logo.png" alt="logo"
+            /></a>
+          </div>
+          <input type="checkbox" id="nav_list" />
+          <ul class="nav_ul">
+            <li class="mynav_list">
+              <a href="./item_list.html">
+                商品列表
+                <ul class="item_drop">
+                  <li>
+                    <a href="./item_list.html"> 花束 </a>
+                  </li>
+                  <li>
+                    <a href="./item_list.html"> 盆花 </a>
+                  </li>
+                  <li>
+                    <a href="./item_list.html"> 永生花 </a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+
+            <li class="mynav_list">
+              <a href="./class.html"> 花藝課程 </a>
+            </li>
+            <li class="mynav_list">
+              <a href="./flowers_knowledge.html"> 花藝百科 </a>
+            </li>
+            <li class="mynav_list">
+              <a href="./flowers_introduce.html"> 常見花材 </a>
+            </li>
+          </ul>
+          <div class="mynav_icon">
+            <a href="./cart.html" class="mynav_cart">
+              <img src="./photos/icon/icon_cart.png" />
+            </a>
+            <a href="#" class="mynav_question">
+              <img src="./photos/icon/icon_question.png" />
+            </a>
+            <label for="member" class="mynav_member" id="login_icon">
+              <img src="./photos/icon/icon_member.png" />
+            </label>
+          </div>
+          <label id="navList" for="nav_list">
+            <span></span><span></span><span></span>
+          </label>
+        </div>
+      </nav>
+    </header>
+
+    <div id="app">
+      <main>
+        <section class="label">
+          <div v-for="flower in flowers" :key="flower.btnId">
+            <button :id="flower.btnId" @click="updateFlowerInfo(flower)">
+              {{ flower.mainTitle }}
+            </button>
+          </div>
+        </section>
+        <div class="introduce_main">
+          <div class="title_block">
+            <h3>{{ selectedFlower.title }}</h3>
+            <div class="pic_main">
+              <img
+                :src="selectedFlower.img_first"
+                :alt="selectedFlower.title"
+              />
+            </div>
+          </div>
+
+          <h2>{{ selectedFlower.mainTitle }}</h2>
+
+          <div class="text_outward">
+            <h4>外觀：</h4>
+            <p>{{ selectedFlower.outward }}</p>
+          </div>
+
+          <div class="pic_first">
+            <img :src="selectedFlower.img_second" :alt="selectedFlower.title" />
+          </div>
+          <div class="pic_second">
+            <img :src="selectedFlower.img_third" :alt="selectedFlower.title" />
+          </div>
+
+          <div class="text_flower">
+            <h4>花語：</h4>
+            <p>{{ selectedFlower.textFlower }}</p>
+          </div>
+        </div>
+
+        <div class="bottom_text">
+          <h4>常見應用：</h4>
+          <p>{{ selectedFlower.products }}</p>
+          <div class="bottom_link">
+            <a href="./item_list.html">— 更多相關商品</a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer">
+        <div class="footer_main">
+          <div class="footer_title">
+            <h4>Sunlight Floral Shop</h4>
+          </div>
+          <div class="footer_contact">
+            <p>電話: 03-123-4567</p>
+            <p>營業時間：每週一 至週六</p>
+            <p>11:00 a.m. ~ 20:30 p.m.</p>
+            <p>地址: 桃園市中壢區復興路46號</p>
+          </div>
+          <div class="footer_followus">
+            <div class="footer_icon">
+              <a href="." class="footer_fb">
+                <img src="./photos/icon/icon_fb.png" alt="facebook" />
+              </a>
+              <a href="." class="footer_ig">
+                <img src="./photos/icon/icon_ig.png" alt="intasgram" />
+              </a>
+              <a href="." class="footer_line">
+                <img src="./photos/icon/icon_line.png" alt="line" />
+              </a>
+              <a href="." class="footer_twitter">
+                <img src="./photos/icon/icon_twitter.png" alt="twitter" />
+              </a>
+            </div>
+            <a href=".#">常見問題</a>
+            <a href=".#">聯繫我們</a>
+          </div>
+        </div>
+
+        <div class="footer_copyright">
+          <p>© Copyright Sunlight floral shop all right reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
