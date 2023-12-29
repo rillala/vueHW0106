@@ -1,0 +1,61 @@
+/* font-family: 'Bebas Neue', sans-serif;
+font-family: 'Kanit', sans-serif;
+font-family: 'Noto Sans TC', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+
+h1 {
+    color: #003F6A;
+    font-size: clamp(16px,6vw,32px);
+    letter-spacing: 3px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h2{
+    font-size: 2vw;
+    color: #003F6A;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+h3 {
+    color: #003F6A;
+    font-size: 1.2vw;
+    letter-spacing: 3px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+h4 {
+    color: #003F6A;
+    font-size: 1.1vw;
+    letter-spacing: 3px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+p, span {
+    font-size: clamp(8px,1vw,14px);
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 3px;
+    line-height: 2;
+}
+
+a, li{
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 2;
+    font-size: clamp(8px,1vw,14px);
+}
+
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    font-size: 14px;
+}
+

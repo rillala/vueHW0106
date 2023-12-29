@@ -1,0 +1,971 @@
+
+/* banner */
+body{
+    width: 100%;
+    margin: 0;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.bannertext1{
+    position: absolute;
+    z-index: 1;
+    left: 7vw;
+    top: 11vw;
+}
+
+.bannertext1 h1{
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 1.3;
+    font-size: 2.5vw;
+}
+
+.bannertext1 span{
+    font-size: 3vw;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #05273d;
+}
+
+.bannertext2{
+    position: absolute;
+    z-index: 1;
+    right: 7vw;
+    bottom: 2vw;
+    text-align: end;
+}
+
+.bannertext2 h1{
+    color: #fff;
+    line-height: 1.3;
+    font-size: 2.5vw;
+}
+
+.bannertext2 span{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: #05273d;
+    font-size: 3vw;
+}
+
+/* news */
+
+.news{
+    width: 85%;
+    background: url(./img/news\ bg.png);
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 4vw;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.news img{
+    width: 35%;
+}
+
+.newslist{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+.newsdt{
+    width: 8vw; 
+    font-size: 14px;
+    color: #003F6A;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2vw;
+}
+
+
+
+.newslist .tag{
+    width: 5vw;
+    font-size: 0.7vw;
+    font-weight: 400;
+    padding: 3px 5px;
+    margin-top: 6px;
+    color: #fff;
+    background-color: #FAB500;
+    border-radius: 3px;
+    text-align: center;
+    
+}
+
+.newslist .date{
+    font-size: 0.9vw;
+    margin-right: 1vw;
+}
+
+.newsct{
+    display: flex;
+    width: 50vw;
+}
+
+.newsct .content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5vw;
+    /* border: 1px solid red; */
+}
+
+.newsdt h4 {
+    margin-left: 3vw;
+}
+
+.newsct p{
+    width: 25vw;
+    font-size: 0.9vw;
+}
+
+.newslist{
+    line-height: 2;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+/* .news a{
+    color: black;
+    font-size: 14px;
+} */
+
+.news1, .news2, .news3, .news4{
+    display: flex;
+    padding: 3vw 0;
+    border-bottom: 1px solid rgb(208, 208, 208);
+}
+
+.news3{
+    border-bottom: none;
+}
+
+/* button */
+
+.btn{
+    background-color: #003F6A;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 4vw;
+}
+
+.btn a{
+    font-size: 1vw;
+    color: #fff;
+    margin: 0 auto;
+    padding: 0.5vw 3vw;
+}
+
+.button {
+    width: 4vw;
+    height: 2vw; 
+    text-align: center;
+    color: white;
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    transition: all .2s ease-out 0s;
+  }
+  .button:hover > span {
+    top: -20px;
+    opacity: 0;
+  }
+  .button:hover > i {
+    opacity: 1;
+    font-size: 1vw;
+    top: 50%;
+  }
+  
+  .button-name,
+  .button-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    transition: all .3s ease-out;
+    position: absolute;
+  }
+  
+  .button-name {
+    font-size: 1vw;
+    opacity: 1;
+  }
+  
+  .button-icon {
+    opacity: 0;
+  }
+  
+  .newsdis{
+    display: none;
+  }
+
+
+/* 流程 */
+
+.procedure{
+    width: 100%;
+    margin-top: 8vw;
+    background-color: #003F6A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400px;
+}
+
+.procedure i{
+    width: 3.5vw;
+    height: 3.5vw;
+    color: #003F6A;
+    background-color: #fff; 
+    border-radius: 100%;
+    padding: 2vw 2vw 2vw;
+    font-size: 3.5vw;
+    text-align: center;
+    height: 100%;
+}
+
+
+.procedure h1{
+    width: 100%;
+    font-weight: 200px;
+    color: white;
+    margin-top: 3vw;
+    margin-bottom: 2vw;
+}
+
+.pro_name{
+    margin: 2vw 0;
+}
+
+.pro_name span{
+    font-size: 1vw;
+}
+
+.steps{
+    color: #fff;
+    display: flex;
+}
+
+.pro1, .pro2, .pro3, .pro4, .pro5{
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 3vw 0;
+}
+
+
+/* product */
+
+.product h1{
+    display: flex;
+    justify-content: center;
+}
+
+
+.product {
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.productlist {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.productlist::-webkit-scrollbar {
+  display: none;
+}
+
+
+.productcard img {
+  position: relative;
+  width: 20vw;
+  overflow: hidden;
+  vertical-align: bottom;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+}
+
+.productcard .tag{
+    width: 6vw;
+    background-color: #003F6A;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+}
+.productcard .tag span{
+    font-size: 0.8vw;
+    color: white;
+    text-align: center;
+    padding: 0.3vw 0;
+    
+}
+
+.tops_link, .bottoms_link, .socks_link, .others_link{
+    position: relative;
+}
+
+.productcard{
+    margin: 3vw 3vw 4vw;
+    border: 1px solid rgb(223, 223, 223);
+}
+
+
+.pre-btn, .nxt-btn {
+        border: none;
+        width: 10vw;
+        height: 100%;
+        position: absolute;
+        top: 10%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 8;
+      }
+    .product_btn img{
+        width: 3vw;
+    }
+      
+      .pre-btn {
+        left: 0;
+        transform: rotate(180deg);
+      }
+      
+      .nxt-btn {
+        right: 0;
+      }
+
+      
+
+/* 在Media query內不會作用 */
+/* @media (hover: hover) {
+    .tops_link:hover::after{
+        position: absolute;
+        background-color: rgba(74, 74, 74, 0.4);
+        content : "排球衣";
+        width: 250px;
+        height: 250px;
+        bottom: 40px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        font-family: 'Noto Sans TC', sans-serif;
+        color: #ffffff;
+        pointer-events: none;
+    }   
+
+    .bottoms_link:hover::after{
+        position: absolute;
+        content : "排球褲";
+        width: 250px;
+        height: 250px;
+        background-color: rgba(74, 74, 74, 0.4);
+        color: #ffffff; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 40px;
+        left: 20px;
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        font-family: 'Noto Sans TC', sans-serif;
+        pointer-events: none;
+    }
+    
+    .socks_link:hover::after{
+        position: absolute;
+        content : "排球襪";
+        width: 250px;
+        height: 250px;
+        background-color: rgba(74, 74, 74, 0.4);
+        color: #ffffff;
+        bottom: 40px;
+        left: 20px;
+        font-size: 40px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 3px;
+        font-family: 'Noto Sans TC', sans-serif;
+        pointer-events: none;
+    }
+} */
+
+
+
+
+/* about us */
+
+.ourTeam{
+    
+    display: flex;
+    justify-content: center;
+}
+
+.index_aboutus{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.index_aboutus img{
+    width: 500px;
+
+}
+.intro h1{
+    margin-left: 40px;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+}
+
+.ourTeam p{
+    width: 400px;
+    padding-left: 40px;
+    line-height: 2;
+}
+
+.viewmore{
+    width: 10vw;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+
+.viewmore a{
+    font-size: 1vw;
+    background-color: #003F6A;
+    color: #fff;
+    /* padding: 6px 15px; */
+    padding: 0.5vw 2vw;
+    border-radius: 5px;
+}
+
+/* 頁面連結 */
+
+.link_list{
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.link_list img{
+    width: 285px;
+    margin: 20px;
+}
+
+.link_list a:hover{
+    opacity: 0.8;
+}
+
+.linkToCourt{
+    position: relative;
+}
+
+.linkToCourt:hover::after{
+    position: absolute;
+    content : "場地";
+    width: 250px;
+    color: #ffffff;
+    bottom: 140px;
+    left: 108px;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-family: 'Noto Sans TC', sans-serif;
+    pointer-events: none;
+}
+
+.linkToRules{
+    position: relative;
+}
+
+.linkToRules:hover::after{
+    position: absolute;
+    content : "規範";
+    width: 250px;
+    color: #ffffff;
+    bottom: 140px;
+    left: 108px;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-family: 'Noto Sans TC', sans-serif;
+    pointer-events: none;
+}
+
+.linkToTips{
+    position: relative;
+}
+
+.linkToTips:hover::after{
+    position: absolute;
+    content : "技巧";
+    width: 250px;
+    color: #ffffff;
+    bottom: 140px;
+    left: 108px;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-family: 'Noto Sans TC', sans-serif;
+    pointer-events: none;
+}
+
+/* loading動畫 */
+
+.loading img{
+    position: absolute;
+    width: 20vw;
+    top: 50vh;
+    left: 40vw;
+    margin: 0 auto;
+    
+    animation: circle infinite 3s linear;
+}
+
+.preload{
+    position: fixed;
+    z-index: 888;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+@keyframes circle{
+    0% {
+      /* opacity: 0.8; */
+    }
+    
+    50% {
+        scale: 1.5;
+        /* opacity: 0.4; */
+    }
+
+    100% {
+        scale: 2;
+        /* opacity: 0; */
+    }
+  }
+
+  .newsmq{
+    display: none;
+  }
+
+
+  @media (max-width: 1024px) {
+    
+    .newsmq{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 4vw;
+    }
+
+    .title h1{
+        font-size: clamp(20px,4vw,32px);
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    .news1 img, .news2 img, .news3 img{
+        width: 90%;
+    }
+    
+    .newsmq h3{
+        font-size: 1.5vw;
+    }
+    
+      
+    .newsdt{
+        width: 40vw;
+        display: flex;
+        /* flex-direction: column; */
+        order: 1;
+    
+    }
+
+    .info{
+        margin-top: 1vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .newsdt .info span{
+        font-size: 1.2vw;
+    }
+
+    .content p{
+        display: none;
+    }
+
+    .info .tag{
+        margin-top: 2vw;
+        width: 6vw;
+    }
+    
+    .btn a{
+        padding: 0.6vw 2vw;
+        background-color: #003F6A;
+        color: white;
+        font-size: 0.5rem;
+        border-radius: 2px;
+    }
+
+    .btn{
+        width: 12vw;
+    }
+
+    
+    .news{
+        display: none;
+    }
+
+    /* procedure */
+
+    .procedure{
+        background-color: #fff;
+        margin-top: 9vw;
+    }
+
+    .procedure .title h1{
+        color: #003F6A;
+        margin-bottom: 6vw;
+        font-size: clamp(20px,4vw,32px);
+    }
+
+    .procedure .steps{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .pro1, .pro2, .pro3, .pro4, .pro5{
+        justify-content: center;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .pro2, .pro4{
+        background-color: #fff;
+        color: #003F6A;
+    }
+    .pro1, .pro3, .pro5{
+        background-color: #003F6A;
+        color: #fff;
+    }
+
+    .pro1 i, .pro3 i, .pro5 i{
+        background-color: #fff;
+        color: #003F6A;
+    }
+
+    .pro2 i, .pro4 i{
+        background-color: #003F6A;
+        color: #fff;
+    }
+
+    .procedure i{
+        padding: 3.5vw;
+        font-size: 4vw;
+    }
+
+    .pro_name{
+        width: 15vw;
+        display: flex;
+        margin-left: 5vw;
+        align-items: center;
+    }
+
+    .pro_name span{
+        font-size: clamp(10px,1vw,14px);
+        text-align: left;  
+    }
+
+    /* product */
+
+    .product{
+        margin-top: 8vw;
+        width: 100%;
+    }
+
+    .product h1{
+        margin: 1vw 0 4vw;
+        font-size: clamp(20px,4vw,32px);
+    }
+    
+    .product .tag{
+        width: 6vw;
+        background-color: #003F6A;
+        position: absolute;
+        top: 3vw;
+        left: 3vw;
+        display: flex;
+        justify-content: center;
+    }
+    .product .tag span{
+        font-size: 1vw;
+        color: white;
+        text-align: center;
+        padding: 0.3vw 0.5vw ;
+        
+    }
+    
+    .tops_link, .bottoms_link, .socks_link, .others_link{
+        position: relative;
+        
+    }
+    
+    .product_list{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .product .title h1{
+        font-size: clamp(20px,4vw,32px);
+    }
+    
+    .product img{
+        border: 1px solid #e9e9e9;
+        width: 20vw;
+        margin: 3vw;
+    }
+
+    .productcard{
+        border: none;
+        margin: 0.1vw;
+    }
+    .nxt-btn, .pre-btn{
+        position: absolute;
+        top: 15%;
+    }
+    
+    .nxt-btn img, .pre-btn img{
+        border: none;
+        width: 2vw;
+        
+    }
+
+
+    /* about us */
+
+    .ourTeam{
+        margin: 3vw 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .index_aboutus img{
+        width: 100%;
+    }
+    
+    .index_aboutus h1{
+        font-size: clamp(20px,4vw,32px);
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 7vw;
+    }
+    
+    .intro p{
+        width: 70%;
+        font-size: 2vw;
+        margin: 2vw 0;
+        text-align: center;
+        margin: 4vw auto;
+       
+    }
+    
+    .viewmore a{
+        font-size: 2vw;
+        padding: 0.7vw 2.5vw;
+        color: white;
+        background-color: #003F6A;
+        border-radius: 3px;
+    }
+    
+    .viewmore{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 3vw;
+        width: 15vw;
+    }
+
+    .link_list{
+        display: none;
+    }
+    
+  }
+
+  @media (max-width: 768px){
+    *{
+        letter-spacing: normal;
+    }
+
+    h1{
+        font-weight: 500;
+    }
+
+    h3{
+        font-weight: 500;
+    }
+
+    /* news */
+
+    .newsmq .newslist{
+        width: 80%;
+    }
+
+    .newsmq .info span{
+        font-size: clamp(8px,1vw,14px);
+    }
+
+    .news1, .news2{
+        border: none;
+    }
+
+    .news2, .news3{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .newsmq .tag{
+        width: 10vw;
+        margin: 0;
+        margin-right: 4vw;
+    }
+
+    .newsmq h3{
+        font-size: clamp(10px,1.5vw,16px);
+    }
+
+    .info{
+        width: 100%;
+        display: flex;
+    }
+
+    .newsmq .news1{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .newsdt{
+        width: 100%;
+    }
+
+    .newsct{
+        width: 100%;
+    }
+
+
+    .newsmq img{
+        width: 100%;
+        vertical-align: bottom;
+    }
+
+
+    .tag{
+        order: -1;
+    }
+
+
+    .btn{
+        width: 18vw;
+        border-radius: 2px;
+    }
+
+    /* procedure */
+
+    .procedure .steps{
+        width: 100%;
+    }
+
+    .procedure span{
+        font-size: clamp(9px,0.8vw,14px);
+        letter-spacing: 1vw;
+        
+    }
+
+    .procedure .pro_name{
+        width: 16vw;
+        text-align: center;
+    }
+
+    .pro1, .pro2,.pro3, .pro4, .pro5{
+        padding: 4vw 0;
+    }
+
+
+    /* product */
+
+    .product .tag{
+        width: 10vw;
+    }
+
+    .product .tag span{
+        font-size: clamp(8px,0.8vw,10px);
+        letter-spacing: normal;
+    }
+
+    .productcard img{
+        width: 35vw;
+    }
+
+    /* .preload{
+        display: none;
+    } */
+  }

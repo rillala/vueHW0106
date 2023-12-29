@@ -1,0 +1,144 @@
+.footer{
+    width: 100%;
+    background-color: #e8f6ff8f;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    color: rgb(0, 0, 0);
+    padding: 2vw 0 0;
+}
+
+
+.footer .logo img{
+    width: 9vw;
+    padding-top: 1vw;
+}
+
+
+.social ul{
+    display: flex;
+    position: relative;
+}
+
+.social li{
+    margin: 0.5vw;
+}
+
+.btlink{
+    margin-left: -9vw;
+    width: 15vw;
+}
+
+.btlink ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btlink li a{
+    font-size: 0.8vw;
+    color: #163f5b;
+    padding: 1vw;
+}
+
+.social i{
+    display: inline-block;
+    color: #0d3854;
+    font-size: 2vw;
+    flex-direction: row-reverse;
+    justify-items: end;
+    padding-left: 0.25vw;
+}
+
+.social_media>div{
+    align-self: flex-end;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    color: #0d3854;
+}
+
+.footerR .form input{
+    padding: 0;
+}
+
+.footerR span{
+    font-size: 0.8vw;
+}
+
+.footerR .form input{
+    font-size: 1.2vw;
+    padding: 0.2vw 0.8vw;
+}
+
+
+
+.contact input{
+    background-color: transparent;
+    border: 0.1vw solid rgb(190, 190, 244);
+}
+
+.ctinfo{
+    color: #0d3854;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vw;
+}
+
+.footertp{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.footerbt{
+    background-color: #e8f6ff8f;
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #d8e4ec;
+}
+
+.copyright span{
+    color: #0d3854;
+    margin: 0 auto;
+    font-size: 0.8vw;
+    letter-spacing: normal;
+}
+
+.ctinfo .social{
+    display: none;
+}
+
+@media (max-width: 768px){
+   
+    .footerR .contact{
+        display: none;
+    }
+
+    .footer .social{
+        display: none;
+    }
+
+    .footertp{
+        display: none;
+    }
+
+    .footer img{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .footerbt{
+        border: none;
+    }
+
+    .copyright{
+        margin-bottom: 2vw;
+    }
+}
