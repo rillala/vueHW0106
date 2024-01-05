@@ -29,92 +29,78 @@
     <script src="./jquery-3.7.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
     <!-- <script src="./script.js"></script> -->
-
   </head>
   <body>
-    <div class="login_container" id="loginBox" style="display: none">
-      <div class="login_main_area" id="login_main">
-        <div class="login_title">
-          <h2>會員登入</h2>
-          <h3>Login</h3>
-        </div>
-        <div class="login_block">
-          <div>
-            <p>帳號：</p>
-            <input type="text" placeholder="請輸入會員帳號" />
+    <div id="app">
+      <div class="login_container" id="loginBox" style="display: none">
+        <div class="login_main_area" id="login_main">
+          <div class="login_title">
+            <h2>會員登入</h2>
+            <h3>Login</h3>
           </div>
-          <div>
-            <p>密碼：</p>
-            <input type="password" placeholder="請輸入密碼" />
+          <div class="login_block">
+            <div>
+              <p>帳號：</p>
+              <input type="text" placeholder="請輸入會員帳號" />
+            </div>
+            <div>
+              <p>密碼：</p>
+              <input type="password" placeholder="請輸入密碼" />
+            </div>
+            <a href="#"><span>忘記密碼?</span></a>
           </div>
-          <a href="#"><span>忘記密碼?</span></a>
-        </div>
-        <div class="login_btn">
-          <a href="#" class="signup">
-            <span>會員註冊</span>
-          </a>
-          <button class="member_login">登入</button>
-          <button class="member_cancel" id="cancelBtn">取消</button>
+          <div class="login_btn">
+            <a href="#" class="signup">
+              <span>會員註冊</span>
+            </a>
+            <button class="member_login">登入</button>
+            <button class="member_cancel" id="cancelBtn">取消</button>
+          </div>
         </div>
       </div>
-    </div>
-    <header>
-      <!-- 導覽列 -->
-      <nav id="header">
-        <div class="mynav">
-          <div class="logo">
-            <a href="./index.html"
-              ><img src="./photos/icon/logo.png" alt="logo"
-            /></a>
-          </div>
-          <input type="checkbox" id="nav_list" />
-          <ul class="nav_ul">
-            <li class="mynav_list">
-              <a href="./item_list.html">
-                商品列表
-                <ul class="item_drop">
-                  <li>
-                    <a href="./item_list.html"> 花束 </a>
-                  </li>
-                  <li>
-                    <a href="./item_list.html"> 盆花 </a>
-                  </li>
-                  <li>
-                    <a href="./item_list.html"> 永生花 </a>
-                  </li>
-                </ul>
-              </a>
-            </li>
+      <header>
+        <!-- 導覽列 -->
+        <nav id="header">
+          <div class="mynav">
+            <div class="logo">
+              <a href="./index.html"
+                ><img src="./photos/icon/logo.png" alt="logo"
+              /></a>
+            </div>
+            <input type="checkbox" id="nav_list" />
+            <ul class="nav_ul">
+              <li
+                class="mynav_list"
+                v-for="navItem in navList"
+                :key="navItem.navType"
+              >
+                <a :href="navItem.href">
+                  {{ navItem.navType }}
+                  <ul class="item_drop" v-if="navItem.productList">
+                    <li
+                      v-for="product in navItem.productList"
+                      :key="product.linkName"
+                    >
+                      <a :href="product.linkSrc">{{ product.linkName }}</a>
+                    </li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
 
-            <li class="mynav_list">
-              <a href="./class.html"> 花藝課程 </a>
-            </li>
-            <li class="mynav_list">
-              <a href="./flowers_knowledge.html"> 花藝百科 </a>
-            </li>
-            <li class="mynav_list">
-              <a href="./flowers_introduce.html"> 常見花材 </a>
-            </li>
-          </ul>
-          <div class="mynav_icon">
-            <a href="./cart.html" class="mynav_cart">
-              <img src="./photos/icon/icon_cart.png" />
-            </a>
-            <a href="#" class="mynav_question">
-              <img src="./photos/icon/icon_question.png" />
-            </a>
-            <label for="member" class="mynav_member" id="login_icon">
-              <img src="./photos/icon/icon_member.png" />
+            <div class="mynav_icon">
+              <a v-for="icon in icons" :href="icon.href" :class="icon.cssClass">
+                <img :src="icon.imgSrc" />
+              </a>
+            </div>
+
+            <label id="navList" for="nav_list">
+              <span></span><span></span><span></span>
             </label>
           </div>
-          <label id="navList" for="nav_list">
-            <span></span><span></span><span></span>
-          </label>
-        </div>
-      </nav>
-    </header>
+        </nav>
+      </header>
 
-    <div id="app">
       <main>
         <section class="label">
           <div v-for="flower in flowers" :key="flower.btnId">
@@ -162,132 +148,43 @@
           </div>
         </div>
       </main>
-    </div>
 
-    <!-- footer -->
-    <footer>
-      <div class="footer">
-        <div class="footer_main">
-          <div class="footer_title">
-            <h4>Sunlight Floral Shop</h4>
-          </div>
-          <div class="footer_contact">
-            <p>電話: 03-123-4567</p>
-            <p>營業時間：每週一 至週六</p>
-            <p>11:00 a.m. ~ 20:30 p.m.</p>
-            <p>地址: 桃園市中壢區復興路46號</p>
-          </div>
-          <div class="footer_followus">
-            <div class="footer_icon">
-              <a href="." class="footer_fb">
-                <img src="./photos/icon/icon_fb.png" alt="facebook" />
-              </a>
-              <a href="." class="footer_ig">
-                <img src="./photos/icon/icon_ig.png" alt="intasgram" />
-              </a>
-              <a href="." class="footer_line">
-                <img src="./photos/icon/icon_line.png" alt="line" />
-              </a>
-              <a href="." class="footer_twitter">
-                <img src="./photos/icon/icon_twitter.png" alt="twitter" />
-              </a>
+      <!-- footer -->
+      <footer>
+        <div class="footer">
+          <div class="footer_main">
+            <div class="footer_title">
+              <h4>Sunlight Floral Shop</h4>
             </div>
-            <a href=".#">常見問題</a>
-            <a href=".#">聯繫我們</a>
+            <div class="footer_contact">
+              <p>電話: 03-123-4567</p>
+              <p>營業時間：每週一 至週六</p>
+              <p>11:00 a.m. ~ 20:30 p.m.</p>
+              <p>地址: 桃園市中壢區復興路46號</p>
+            </div>
+            <div class="footer_followus">
+              <div class="footer_icon">
+                <a
+                  v-for="link in socialLinks"
+                  :href="link.href"
+                  :class="link.cssClass"
+                  :key="link.name"
+                >
+                  <img :src="link.imgSrc" :alt="link.altText" />
+                </a>
+              </div>
+
+              <a href=".#">常見問題</a>
+              <a href=".#">聯繫我們</a>
+            </div>
+          </div>
+
+          <div class="footer_copyright">
+            <p>© Copyright Sunlight floral shop all right reserved.</p>
           </div>
         </div>
-
-        <div class="footer_copyright">
-          <p>© Copyright Sunlight floral shop all right reserved.</p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-      Vue.createApp({
-  data() {
-    return {
-      flowers: [
-        {
-          mainTitle: "玫瑰花",
-          title: "Rose",
-          outward: "玫瑰為落葉灌木，有邊刺。花有紫紅色、白色，花期5-6月",
-          textFlower:
-            "紅色玫瑰象徵濃烈的愛情和熱情;粉紅色玫瑰象徵溫柔、純真; 白色玫瑰則為純潔、無暇的象徵",
-          products: "花束、花籃、婚禮和其他特殊場合裝飾。",
-          img_first: "./photos/flower_introduce/rose_first.jpg",
-          img_second: "./photos/flower_introduce/rose_second.jpg",
-          img_third: "./photos/flower_introduce/rose_third.jpg",
-          btnId: "roseBtn",
-        },
-        {
-          mainTitle: "桔梗花",
-          title: "Eustoma",
-          outward:
-            "桔梗花朵顏色豐富，花型和玫瑰相似，因此有「無刺的玫瑰」之稱，不僅深受一般民眾的喜愛，也是許多專業花藝師偏愛的花種之一",
-          textFlower:
-            "桔梗隨著顏色的不同，也有著不同的花語：「永遠的愛」「不變的愛」「氣質」「誠實」",
-          products: "花束、盆花、婚禮捧花。",
-          img_first: "./photos/flower_introduce/eustoma_first.jpg",
-          img_second: "./photos/flower_introduce/eustoma_second.jpg",
-          img_third: "./photos/flower_introduce/eustoma_third.jpg",
-          btnId: "eustomaBtn",
-        },
-        {
-          mainTitle: "繡球花",
-          title: "Hydrangeas",
-          outward:
-            "花朵碩大，顏色繽紛，顏色根據土壤決定，有綠色、白色、粉色、紫色、藍色等。",
-          textFlower:
-            "繡球花的花語根據顏色而不同。粉紅色象徵「有活力的女性」、藍色象徵「堅毅不搖的愛」、綠色象徵「專一的愛」。",
-          products: "大型鮮花擺設、花束及開幕花籃。",
-          img_first: "./photos/flower_introduce/hydrangeas_first.jpg",
-          img_second: "./photos/flower_introduce/hydrangeas_second.jpg",
-          img_third: "./photos/flower_introduce/hydrangeas_third.jpg",
-          btnId: "hydrangeasBtn",
-        },
-        {
-          mainTitle: "百合花",
-          title: "Lily",
-          outward:
-            "百合的形狀、顏色、香味和品種都很特別。由於鮮花盛放時花朵很大，頗具觀賞性，因此百合花 常常在花束製作中被用作主花。",
-          textFlower:
-            "花語是純潔、莊嚴，以及財富與榮耀，因此百合花一直是古今中外相當受歡迎的花卉。",
-          products: "花束、盆花。",
-          img_first: "./photos/flower_introduce/lily_first.jpg",
-          img_second: "./photos/flower_introduce/lily_second.jpg",
-          img_third: "./photos/flower_introduce/lily_third.jpg",
-          btnId: "lilyBtn",
-        },
-        {
-          mainTitle: "蘭花",
-          title: "Orchid",
-          outward:
-            "蘭花是花店裡非常搶手的鮮花品種。蘭花因其精緻獨特的形狀、鮮豔的色彩令人讚歎。",
-          textFlower:
-            "蘭花的花語為淡泊、高雅、美好、高潔、賢德。自古以來，蘭花和梅、竹、菊並列為花中四君子。",
-          products: "花束、盆花。",
-          img_first: "./photos/flower_introduce/orchid_first.jpg",
-          img_second: "./photos/flower_introduce/orchid_second.jpg",
-          img_third: "./photos/flower_introduce/orchid_third.jpg",
-          btnId: "orchidBtn",
-        },
-      ],
-      selectedFlower: {},
-    };
-  },
-  methods: {
-    updateFlowerInfo(flower) {
-      this.selectedFlower = flower;
-    },
-  },
-  mounted() {
-    // 初始設置，例如選擇第一種花卉
-    this.selectedFlower = this.flowers[0];
-  },
-}).mount("#app");
-    </script>
-
+      </footer>
+    </div>
+    <script src="vue_hw.js"></script>
   </body>
 </html>
