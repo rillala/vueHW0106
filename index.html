@@ -1,15 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>js.vue 作業</title>
-</head>
-<body>
-    <h1>作業</h1>
-    <a href="./vue_hw.html">頁面一</a>
-    <br>
-    <a href="./vue_hw2.html">頁面二</a>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-</body>
+      body {
+        width: 50%;
+        margin: 40px auto 0;
+        text-align: center;
+      }
+
+      a {
+        display: block;
+        margin-top: 20px;
+        font: bold 20px;
+        padding: 10px 0;
+        background: #ccc;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+  </head>
+  <body id="app">
+    <h1>作業</h1>
+    <a v-for="page in pages" :href="page.url">{{page.title}} </a>
+
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            pages: [
+              {
+                url: "./vue_hw.html",
+                title: "頁面一",
+              },
+              {
+                url: "./vue_hw2.html",
+                title: "頁面二",
+              },
+            ],
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
 </html>
